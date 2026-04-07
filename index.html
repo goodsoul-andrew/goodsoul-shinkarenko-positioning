@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Практика позиционирования</title>
@@ -17,14 +17,23 @@
 
 <div id="overlay" class="overlay hidden">
     <div class="modal">
-        <button id="closeModalBtn" class="close-btn" aria-label="Закрыть модальное окно">
+        <button
+                id="closeModalBtn"
+                class="close-btn"
+                aria-label="Закрыть модальное окно"
+        >
             &times;
         </button>
 
         <h2 class="modal-title">Модальное окно</h2>
-        <p class="modal-text">
-            пупупу
-        </p>
+        <p class="modal-text">Loading progress</p>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+
+            <div class="progress-text progress-text-black">Loading...</div>
+            <div class="progress-text progress-text-white" id="progressTextWhite">Loading...</div>
+        </div>
     </div>
 </div>
 
