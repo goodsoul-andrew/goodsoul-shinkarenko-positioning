@@ -148,3 +148,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.accordeon {
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.accordeon-head {
+  cursor: pointer;
+}

@@ -4,7 +4,8 @@ const overlay = document.getElementById('overlay');
 
 const progressFill = document.getElementById('progressFill');
 const progressTextWhite = document.getElementById('progressTextWhite');
-
+const accordeonHeads = document.getElementsByClassName("accordeon-head")
+const accordeonOpened = new Array(accordeonHeads.length).fill(false);
 let currentStep = 0;
 const seconds = 3;
 const totalSteps = 60 * seconds;
@@ -28,3 +29,13 @@ closeModalBtn.addEventListener('click', () => {
     overlay.classList.add('hidden');
     currentStep = 0;
 });
+
+for (let i = 0; i < accordeonHeads.length; i++) {
+    const accordeonHead = accordeonHeads[i]
+        accordeonHead.addEventListener("click", (event) => {
+        const nextEl = accordeonHead.nextElementSibling;
+        accordeonOpened[i] = ! accordeonOpened[i];
+        nextEl.style.display = accordeonOpened[i] ? "" : "none";
+        accordeonHead.textContent = accordeonOpened[i] ? "↓" : "→" + accordeonHead.textContent
+    })
+}
