@@ -1,13 +1,9 @@
-/*
-    Изменить элементу цвет и ширину можно вот так:
-
-    const element = document.querySelector('.myElement');
-    element.style.color = 'red';
-    element.style.width = '300px';
-*/
 const openModalBtn = document.getElementById('openModalBtn');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const overlay = document.getElementById('overlay');
+
+const progressFill = document.getElementById('progressFill');
+const progressTextWhite = document.getElementById('progressTextWhite');
 
 openModalBtn.addEventListener('click', () => {
     overlay.classList.remove('hidden');
@@ -16,3 +12,8 @@ openModalBtn.addEventListener('click', () => {
 closeModalBtn.addEventListener('click', () => {
     overlay.classList.add('hidden');
 });
+
+const progress = 45;
+
+progressFill.style.width = progress + '%';
+progressTextWhite.style.width = progress + '%';
