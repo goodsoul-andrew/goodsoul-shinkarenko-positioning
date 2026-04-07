@@ -36,6 +36,6 @@ for (let i = 0; i < accordeonHeads.length; i++) {
         const nextEl = accordeonHead.nextElementSibling;
         accordeonOpened[i] = ! accordeonOpened[i];
         nextEl.style.display = accordeonOpened[i] ? "" : "none";
-        accordeonHead.textContent = accordeonOpened[i] ? "↓" : "→" + accordeonHead.textContent
+        accordeonHead.textContent = (accordeonOpened[i] ? "↓" : "→") + accordeonHead.textContent.substring(1);
     })
 }
