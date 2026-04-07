@@ -1,18 +1,25 @@
 .image-container {
   width: 100px;
   height: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .windows-image {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   display: grid;
-  grid-template-columns: 50px 50px;
-  grid-template-rows: 50px 50px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
 }
 
-.windows-square {
-  
+.japan {
+  background-color: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
 
 * {
